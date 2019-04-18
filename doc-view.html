@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Janos Brezniczky's homepage</title>
+    <!-- css-reset to resolve browser inconsistencies -->
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <!-- own stylesheet -->
+    <link rel="stylesheet" type="text/css" href="default.css"/>
+  </head>
+  <body>
+    <div id="header-parent" class="hcentered-parent">
+      <div id="header-panel" class="hcentered-panel">
+        <div id="left-header-gradient" class="gradient-frame"> </div>
+        <div id="header-content">
+          <h1 id="title-bar">Hello!</h1>
+          <h5 id="under-construction">[this page is <i>always</i> under construction :) ]</h5>
+        </div>
+        <div id="right-header-gradient" class="gradient-frame"> </div>
+      </div>
+    </div>
+<div id="content-panel-parent" class="hcentered-parent">
+  <div id="content-panel" class="hcentered-panel">
+    <div id="left-content-gradient" class="gradient-frame"> </div>
+    <div id="content">
+    <!-- object.data is initialized later dynamically -->
+    <object id="doc-viewer-object" type="application/pdf"
+      width="100%" height="100%">
+      <p>
+        Your browser does not support this view - please
+        <a id="doc-viewer-alt" href="myfile.pdf">click here</a> to view the PDF!
+      </p>
+    </object>
+    </div> <!-- content -->
+    <div id="right-content-gradient" class="gradient-frame"> </div>
+
+    <script language="javascript">
+      function isRequested(pagename) {
+        url = window.location.href;
+        var regex = new RegExp("[?]" + pagename + "$")
+        results = regex.exec(url)
+        return (results != null)
+      }
+
+      // initialize the object source according to the query params
+      if (isRequested("short"))
+        pdf_url = "docs/CV - Janos Brezniczky - short.pdf";
+      else if (isRequested("mtcars")) {
+        pdf_url = "docs/mtcars-analysis.pdf"
+      } else {
+        regex = new RegExp("[?]cert=.$");
+        results = regex.exec(url);
+        if (results != null) {
+          hit = results[0];
+          idx = hit.substr(hit.length - 1);
+          if (idx == "1") {
+            pdf_url = "docs/certificate-C++-for-C-programmers.pdf";
+          } else if (idx == "2") {
+            pdf_url = "docs/LearningPythonandDjango_CertificateOfCompletion.pdf";
+          }
+        }
+        else {
+          pdf_url = "docs/CV - Janos Brezniczky.pdf"
+        }
+      }
+
+      document.getElementById("doc-viewer-object").data = pdf_url;
+      document.getElementById("doc-viewer-alt").href = pdf_url;
+    </script>
+  </div><!-- content-panel -->
+</div><!-- content-panel-parent" -->
+  </body>
+</html>

@@ -1,0 +1,284 @@
+/* positioning */
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1, h5 {
+  text-align: center;
+}
+
+div {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1, h5 {
+  margin: 0px;
+}
+
+h2 {
+  text-align: left;
+  margin: 0px 0px 0px 0px;
+  padding: 10px 5px 20px 5px;
+/*  height: 40px; */
+}
+
+.header-link {
+  text-decoration: none;
+}
+
+.blog-entry {
+  text-decoration: none;
+}
+
+h4 {
+  margin-top: 10px;
+  padding-left: 7px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.hcentered-parent {
+  align: center;
+  margin: 0px;
+}
+
+.hcentered-panel {
+  width: 1024px;
+  margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 10px 0px 10px;
+}
+
+#header-panel {
+  padding: 0 0px 0px 0px;
+  height: 110px;
+}
+
+#content-panel {
+  padding: 0 0 0 0;
+  height: 650px;
+}
+
+#content {
+  width: 994px;
+  float: left;
+}
+
+#header-content {
+  float: left;
+  width: 994px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.gradient-frame {
+  height: 100%;
+  width: 15px;
+  float: left;
+}
+
+#left-content {
+  display: block;
+  width: 700px;
+  float: left;
+}
+
+#right-content {
+  /* display: none; */
+  padding-left: 10px;
+  width: 284px;
+  float: left;
+}
+
+#blog-entry-list {
+  height: 570px;
+  overflow-y: auto;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 7px;
+  margin-right: 50px;
+}
+
+img {
+  width: 24px;
+  height: 24px;
+  padding-left: 2px;
+  vertical-align: -2px;
+}
+
+td {
+  padding: 5px 5px 5px 5px;
+}
+
+.date {
+  text-decoration: underline;
+  white-space: nowrap;
+  margin-left: 5px;
+  padding-left: 7px;
+}
+
+.error {
+  padding-left: 7px;
+  padding-top: 5px;
+}
+
+/* explicit list appearance thanks to CSS-reset ( ... >< >< ><... ) */
+
+ul {
+  padding-left: 5px;
+  margin-top: 10px;
+  width: 700px;
+  margin-bottom: 25px;
+}
+
+li {
+  list-style: disc;
+  margin-left: 5px;
+  list-style-position: inside;
+}
+
+/* fonts */
+
+body {
+  font-size: 16px;
+  /* font is to be consistent with that of the blog */
+  font-family: Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+}
+
+td {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 200%;
+}
+
+h2 {
+  font-size: 160%;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+/* colours */
+
+body {
+  background-color: #cdf8cd;
+}
+
+h1, h5 {
+  color: #000055;
+}
+
+h2 {
+  background: #eeffee; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#eeffee, #eeffee, #eeffee, #eeffee, #ddffdd;); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#eeffee, #eeffee, #eeffee, #eeffee, #ddffdd;); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#eeffee, #eeffee, #eeffee, #eeffee, #ddffdd;); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#eeffee, #eeffee, #eeffee, #eeffee, #ddffdd); /* Standard syntax */
+}
+
+a h2:hover, a h4:hover {
+  background: #f8fff8; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#f8fff8, #f8fff8, #f8fff8, #f8fff8, #ddffdd;); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#f8fff8, #f8fff8, #f8fff8, #f8fff8, #ddffdd;); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#f8fff8, #f8fff8, #f8fff8, #f8fff8, #ddffdd;); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#f8fff8, #f8fff8, #f8fff8, #f8fff8, #ddffdd); /* Standard syntax */
+}
+
+#header-parent {
+  background-color: #c8dcff;
+}
+
+#header-panel {
+  background-color: #e0f1ff;
+}
+
+#content-panel {
+  background-color: #ddffdd; /* #b0feb5; /* #a0de05; */ /* #ddffdd; */
+}
+
+#content-panel-parent {
+  background-color: #caf8ca;
+}
+
+#header-panel {
+  background-color: #e0f1ff;
+}
+
+a:link {
+  color: #303000;
+}
+
+a:visited {
+  color: #383810;
+}
+
+html, body {
+  color: #004000;
+  height: 100%; /* "ugly gray bar at the bottom"-fix - implied by CSS-reset */
+}
+
+a:hover, table:hover {
+  background-color: #eaffea;
+  color: #303000;
+}
+
+/* filters for harmonizing black-transparent icons */
+.bt-icon-1 {
+  /* invert the image to allow colourization */
+  -webkit-filter: invert(29%); /* Chrome, Safari, Opera */
+  filter: invert(29%);
+}
+
+.bt-icon-2 {
+  /* after the image was brightened, give it a colour */
+  -webkit-filter: sepia(100%); /* Chrome, Safari, Opera */
+  filter: sepia(100%);
+}
+
+#left-header-gradient {
+    background: #caf8ca; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #c8dcff , #e0f1ff); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #c8dcff, #e0f1ff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #c8dcff, #e0f1ff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #c8dcff, #e0f1ff); /* Standard syntax (must be last) */
+}
+
+#right-header-gradient {
+    background: #caf8ca; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #e0f1ff, #c8dcff); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #e0f1ff, #c8dcff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #e0f1ff, #c8dcff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #e0f1ff, #c8dcff); /* Standard syntax (must be last) */
+}
+
+#left-content-gradient {
+    background: #caf8ca; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #caf8ca , #ddffdd); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #caf8ca, #ddffdd); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #caf8ca, #ddffdd); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #caf8ca , #ddffdd); /* Standard syntax (must be last) */
+}
+
+#right-content-gradient {
+    background: #caf8ca; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #ddffdd, #caf8ca); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #ddffdd, #caf8ca); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #ddffdd, #caf8ca); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #ddffdd, #caf8ca); /* Standard syntax (must be last) */
+}
+
+.error {
+  color: #666655;
+}
